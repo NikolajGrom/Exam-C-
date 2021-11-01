@@ -8,21 +8,24 @@ using static System.Console;
 namespace Exam_C_
 {
     //Запасные части
-    public class BrakePads : ProductСategory
+    [Serializable]
+    public class CarTires : ProductСategory
     {
         string Name;
 
-        public BrakePads(string name, DateTime date, double price, string СatName, string Name): base( name,  date,  price)
+        public CarTires(string name, DateTime date, double price, string СategoryName, string Name)
+                        : base( name,  date,  price, СategoryName)
         {
             this.Name = Name;
         }
         public override void Вescription()
         {
-            WriteLine("Тормозные колодки : ");
+            WriteLine(" Автомобильные шины : ");
         }
         public override string ToString()
         {
             return base.ToString() +
+                        $" Название : " +
                         $" {Name}\n";
         }
 

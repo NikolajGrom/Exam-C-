@@ -8,14 +8,15 @@ using static System.Console;
 namespace Exam_C_
 {
     //Запасные части
+    [Serializable]
     public class Drosel : ProductСategory
     {
-        string Name;
+        string DrName;
 
-        public Drosel(string name, DateTime date, double price, string СatName, string Name)
-                     : base( name,  date,  price)
+        public Drosel(string name, DateTime date, double price, string СategoryName, string DrName)
+                     : base( name,  date,  price, СategoryName)
         {
-            this.Name = Name;
+            this.DrName = DrName;
         }
         public override void Вescription()
         {
@@ -24,7 +25,8 @@ namespace Exam_C_
         public override string ToString()
         {
             return base.ToString() +
-                        $" { Name }\n";
+                        $" Название : " +
+                        $" { DrName }\n";
         }
 
     }

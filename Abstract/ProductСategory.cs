@@ -9,29 +9,34 @@ using static System.Console;
 namespace Exam_C_
 {
     // Категория товара
+    [Serializable]
     public abstract class ProductСategory : SparPearts
     {
        
-        string СategoryName;
+       public string СategoryName;
 
         public ProductСategory(string name, DateTime date, double price) 
                               : base(name, date, price)
         {
         }
 
-        public ProductСategory( string name, DateTime date, double price, string СatName)
+        public ProductСategory( string name, DateTime date, double price, string СategoryName)
                               : base(name, date, price)
         {
-            СategoryName = СatName;
+            this.СategoryName = СategoryName;
         }
 
         public override string ToString()
         {
             return base.ToString() +
-                  $"Категория товара:" +
+                  $" Категория товара: " +
                   $"{ СategoryName }\n";
         }
+        public abstract void Вescription(); //описание
 
-
+        //public override void Вescription()
+        //{
+        //   // WriteLine(" Запчасти : ");
+        //}
     }
 }
