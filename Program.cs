@@ -60,7 +60,7 @@ namespace Exam_C_
 
             //auto.ShowCategory();
             auto.ShowAll();
-            
+            /*
             // создаем объект BinaryFormatter
             BinaryFormatter formatter = new BinaryFormatter();
             // получаем поток, куда будем записывать сериализованный объект
@@ -70,7 +70,8 @@ namespace Exam_C_
 
                 Console.WriteLine("Объект сериализован");
             }
-
+              */
+              /*
             // десериализация из файла people.dat
             using (FileStream fs = new FileStream("auto.dat", FileMode.OpenOrCreate))
             {
@@ -78,13 +79,6 @@ namespace Exam_C_
 
                 Console.WriteLine("Объект десериализован");
                 Console.WriteLine($"Имя: {newauto.Name} ");
-            }
-            /*
-            XmlSerializer formatter = new XmlSerializer(typeof(AutoShop<ProductСategory>));
-             using(FileStream stream = new FileStream("auto.xml", FileMode.OpenOrCreate))
-             {
-                formatter.Serialize(stream, auto);
-                Console.WriteLine("Объект сериализован");
             }
             */
             Console.Read();
